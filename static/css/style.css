@@ -1,0 +1,107 @@
+/* Global */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+:root{
+    /* BG COLOR MODE */
+    --color-light:#fff;
+    --color-dark:#222;
+    /* TEXT COLOR MODE */
+    --color-text-light:#222;
+    --color-text-dark:rgb(233, 233, 233);
+}
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+/* Light Mode */
+body{
+    background-color: var(--color-light);
+    color: var(--color-text-light);
+    transition: all .4s;
+    font-family:'Roboto', sans-serif;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+}
+header{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 2;
+    padding: 20px;
+}
+header section {
+    transition-duration:.5s;
+    padding: 10px;
+}
+.ThemeMode{
+    font-size: 12px;
+    text-decoration: none;
+    color: var(--color-text-light);
+}
+.ThemeMode:hover{
+    color: var(--color-text-dark);
+}
+header section:hover{
+    background: rgb(118,0,252);
+    background: linear-gradient(135deg, rgba(118,0,252,1) 0%, rgba(163,0,255,1) 50%, rgba(255,0,236,1) 100%);
+    cursor: pointer;
+    transition-duration:.5s;
+    border-radius:10px;
+}
+.content-text{
+    width: 80%;
+    margin: 7% auto;
+}
+.maquine-effect{
+    font-size: 7em;
+    color: rgba(149,69,252,1);
+    font-weight: bold;
+    background-image:linear-gradient(135deg, rgba(149,69,252,1) 0%, rgba(200,81,242,1) 49%, rgba(253,29,217,1) 100%);
+    color: transparent;
+   -webkit-background-clip: text; 
+    display: block;
+    white-space: nowrap;
+    border-right: 4px solid rgba(149,69,252,1);
+    width: 13ch;
+    animation: typing 2.8s steps(14) infinite,
+    blink .5s infinite  step-end alternate;
+    overflow: hidden;
+}
+@keyframes typing {
+    from{width: 0;}
+}
+@keyframes blink{
+    50%{
+        border-color: transparent;
+    }
+}
+.subtitle{
+    margin-top: 10px;
+    font-size:2.5em;
+}
+.content-text p{
+    line-height:30px;
+}
+/* Dark Mode */
+.darkmode{
+    background-color: var(--color-dark);
+    color: var(--color-text-dark);
+    transition: all .4s;
+    font-family:'Roboto', sans-serif;
+}
+.darkmode .ThemeMode{
+    font-size: 12px;
+    text-decoration: none;
+    color: var(--color-text-dark);
+}
+.darkmode .ThemeMode:hover{
+    color: var(--color-text-light);
+}
+.darkmode .subtitle{
+    color: rgb(200,200,200);
+    margin-top: 10px;
+    font-size:2.5em;
+}
